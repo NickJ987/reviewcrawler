@@ -4,8 +4,9 @@ require 'csv'
 
 
 class ReviewCrawler
-	attr_reader: :retailer, :sku, :pn, :url, :price
-	def inititialize(retailer, sku, pn, url, price)
+	attr_reader: :category, :retailer, :sku, :pn, :url, :price
+	def inititialize(category, retailer, sku, pn, url, price)
+    @category = category
 		@retailer = retailer
 		@sku = sku
 		@pn = pn
