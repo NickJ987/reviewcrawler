@@ -45,6 +45,8 @@ private
     case retailer.downcase
     when 'best buy'
       parser.css('span.average-score')[0].text.match(/\d.+/)
+    when 'hhgregg'
+      parser.css('span."pr-rating pr-rounded average"')[0].text.match(/\d.+/)
     end
   end
 
@@ -52,6 +54,8 @@ private
     case retailer.downcase
     when 'best buy'
       parser.css('meta[itemprop="reviewCount"]')[0]['content']
+    when 'hhgregg'
+      parser.css('span.count')[0].text.match(/\d.+/)
     end
   end
 
