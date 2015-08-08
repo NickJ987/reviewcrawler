@@ -4,8 +4,8 @@ require 'csv'
 
 
 class ReviewCrawler
-	attr_reader: :category, :retailer, :sku, :pn, :url, :price
-	def inititialize(category, retailer, sku, pn, url, price)
+	attr_reader :category, :retailer, :sku, :pn, :url, :price
+	def initialize(category, retailer, sku, pn, url, price)
     @category = category
 		@retailer = retailer
 		@sku = sku
@@ -61,11 +61,11 @@ end
 contents = CSV.open "reviewcrawler-input.csv", headers: true, header_converters: :symbol
 contents.each do |row|
 
-  product = ReviewCrawler.new(row[:retailer], row[:sku], row[:pn], row[:url], row[:price])
+  product = ReviewCrawler.new(row[:category], row[:retailer], row[:sku], row[:pn], row[:url], row[:price])
 
-  puts product.retailer, product.sku, product.pn, product.url, product.price, product.avg_rating, product.rating_count
+  puts product.category, product.retailer, product.sku, product.pn, product.url, product.price, product.avg_rating, product.rating_count
 
   CSV.open("reviewcrawler-output.csv", 'a+', headers: true, header_converters: :symbol) do |in_file|
-    in_file << [product.retailer, product.sku, product.pn, product.url, product.price, product.avg_rating, product.rating_count]
+    in_file << [product.category, product.retailer, product.sku, product.pn, product.url, product.price, product.avg_rating, product.rating_count]
   end
 end
