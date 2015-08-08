@@ -6,4 +6,6 @@ class ReviewCrawler
 		@partnumber = partnumber
 	end
 
+  
+
 end
