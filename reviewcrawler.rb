@@ -47,6 +47,13 @@ private
       parser.css('span.average-score')[0].text.match(/\d.+/)
     when 'hhgregg'
       parser.css('div.pr-snapshot-body-wrapper span')[1].text.match(/\d.+/)
+    when 'home depot'
+      parser.css('span[itemprop="ratingValue"]')[0].text.match(/\d.+/)
+    when 'lowes'
+      parser.css('span.productRating img')[0]['title'].match(/\d.\d/)
+    when 'pcrichard'
+      parser.css('div.pr-snapshot-body-wrapper span')[1].text.match(/\d.+/)
+    
     end
   end
 
@@ -56,6 +63,12 @@ private
       parser.css('meta[itemprop="reviewCount"]')[0]['content']
     when 'hhgregg'
       parser.css('span.count')[0].text.match(/\d.+/)
+    when 'home depot'
+      parser.css('span[itemprop="reviewCount"]').text.match(/\d+/)
+    when 'lowes'
+      parser.css('span.productRating')[0].text.match(/\d+/)
+    when 'pcrichard'
+      parser.css('span.count')[0].text.match(/\d+/)
     end
   end
 
