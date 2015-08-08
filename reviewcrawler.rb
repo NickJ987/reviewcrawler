@@ -46,7 +46,7 @@ private
     when 'best buy'
       parser.css('span.average-score')[0].text.match(/\d.+/)
     when 'hhgregg'
-      parser.css('span."pr-rating pr-rounded average"')[0].text.match(/\d.+/)
+      parser.css('div.pr-snapshot-body-wrapper span')[1].text.match(/\d.+/)
     end
   end
 
