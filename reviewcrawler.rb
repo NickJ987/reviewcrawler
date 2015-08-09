@@ -55,7 +55,6 @@ private
       parser.css('div.pr-snapshot-body-wrapper span')[1].text.match(/\d.+/)
     when 'costco'
       parser.css('meta[itemprop="ratingValue"]')[0]['content']
-
     end
   end
 
@@ -73,7 +72,6 @@ private
       parser.css('span.count')[0].text.match(/\d+/)
     when 'costco'
       parser.css('meta[itemprop="reviewCount"]')[0]['content']
-
     end
   end
 
