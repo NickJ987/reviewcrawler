@@ -54,7 +54,7 @@ private
     when 'pcrichard'
       parser.css('div.pr-snapshot-body-wrapper span')[1].text.match(/\d.+/)
     when 'costco'
-      parser.css('meta[itemprop="ratingValue"]')[0]['content']
+      parser.css('meta[itemprop="ratingValue"]')[0]['content'].match(/\d.\d{2}/)
     when 'sears'
       parser.css('span[itemprop="ratingValue"]')[0].text.match(/\d.+/)
     end
