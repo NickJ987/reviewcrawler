@@ -65,7 +65,7 @@ private
     when 'best buy'
       parser.css('meta[itemprop="reviewCount"]')[0]['content']
     when 'hhgregg'
-      parser.css('span.count')[0].text.match(/\d.+/)
+      parser.css('p.pr-snapshot-average-based-on-text')[0].text.match(/\d/)
     when 'home depot'
       parser.css('span[itemprop="reviewCount"]').text.match(/\d+/)
     when 'lowes'
