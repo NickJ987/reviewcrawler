@@ -51,7 +51,7 @@ private
       parser.css('span[itemprop="ratingValue"]')[0].text.match(/\d.+/)
     when 'lowes'
       parser.css('span.productRating img')[0]['title'].match(/([\d.]+)/)
-    when 'pcrichard'
+    when 'pc richard'
       parser.css('div.pr-snapshot-body-wrapper span')[1].text.match(/\d.+/)
     when 'costco'
       parser.css('meta[itemprop="ratingValue"]')[0]['content'].match(/\d.\d{2}/)
