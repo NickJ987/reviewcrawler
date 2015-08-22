@@ -70,7 +70,7 @@ private
       parser.css('span[itemprop="reviewCount"]')[0].text.match(/\d+/)
     when 'lowes'
       parser.css('span.productRating')[0].text.match(/\d+/)
-    when 'pcrichard'
+    when 'pc richard'
       parser.css('span.count')[0].text.match(/\d+/)
     when 'costco'
       parser.css('meta[itemprop="reviewCount"]')[0]['content']
