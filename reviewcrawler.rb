@@ -50,7 +50,7 @@ private
     when 'home depot'
       parser.css('span[itemprop="ratingValue"]')[0].text.match(/\d.+/)
     when 'lowes'
-      parser.css('span.productRating img')[0]['title'].match(/\d.\d/)
+      parser.css('span.productRating img')[0]['title'].match(/([\d.]+)/)
     when 'pcrichard'
       parser.css('div.pr-snapshot-body-wrapper span')[1].text.match(/\d.+/)
     when 'costco'
@@ -67,7 +67,7 @@ private
     when 'hhgregg'
       parser.css('p.pr-snapshot-average-based-on-text')[0].text.match(/\d/)
     when 'home depot'
-      parser.css('span[itemprop="reviewCount"]').text.match(/\d+/)
+      parser.css('span[itemprop="reviewCount"]')[0].text.match(/\d+/)
     when 'lowes'
       parser.css('span.productRating')[0].text.match(/\d+/)
     when 'pcrichard'
